@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTP-8">
+        <link rel="stylesheet" href="../static/test.css">
+    </head>
+    <body>
+        <div class="full-screen-image">
+            <img src="../static/entance.jpg">
+        </div>
+
+        <div class="container"></div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="alert alert-danger">
+            <ul>
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      {% endwith %}
+
+            <form method="post" class="form">
+                <h2>Зарегистрируйтесь для входа на сайт</h2>
+
+                <input type="text" name="username" placeholder="Имя" id="Firstname" class="input" required><br><br>        
+                <input type="text" name="password" placeholder="Пароль" id="Password" class="input" required><br><br>
+                <input type="text" name="email" placeholder="Почта" id="Email" class="input" required><br><br>
+
+                <button type="button" onclick="clean()" class="inputOTKR" >СТЕРЕТЬ</button> 
+                <button type="submit" class="inputOTKR" >ЗАРЕГИСТРИРОВАТЬСЯ</button>
+
+                <script>
+                    function clean()
+                    {
+                        document.getElementById("Firstname").value =""
+                        document.getElementById("Password").value =""
+                        document.getElementById("Email").value =""
+                    }
+                </script>
+            </form>
+   </body>
+</html>

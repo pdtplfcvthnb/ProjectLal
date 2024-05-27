@@ -1,0 +1,7 @@
+<h1 class="mb-5">Мои любимые электробусы</h1>
+{% for electrobus in electrobus_spisok %}
+<h1>{{ electrobus.model}}</h1>
+<div>
+  <p>Электробус: <strong>{{electrobus.bortNumber}}</strong></p>
+</div>
+{% endfor %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTP-8">
+        <title>Страница Пользователя</title>
+        <link rel="stylesheet" href="../static/Main.css">
+    </head>
+    <body>
+        <div class="navbar"> 
+            <a href="main">ГЛАВНАЯ - выход</a> <br><br>
+
+            <br><br> <h1  style="text-align: center;" >Страница Пользователя</h1>
+        </div>
+        <form method="post">
+            <div class="navbar">
+                <h1 style="text-align: center;" >Добрый день, {{ user.username }}</h1> 
+
+                <label for="username" class="form-label">Ваше имя:</label>
+                <input type="text" class="form-control" id="username" name="username" value="{{ user.username }}" required>
+                <label for="email" class="form-label">Ваш емаил: </label>
+                <input type="text" class="form-control" id="email" name="email" value="{{ user.email }}" required>
+                <a href="logout">Выйти из аккаунта </a>
+                <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+            </div>
+
+        </form>
+
+
+    </body>
+
+</html>
+
