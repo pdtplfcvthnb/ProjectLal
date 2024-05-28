@@ -44,7 +44,6 @@ def login():
             flash('Invalid username or password')
     return render_template('Auth.html')
 
-
 @app.route('/user', methods=['GET', 'POST'])
 def user():
     if current_user.is_authenticated:
