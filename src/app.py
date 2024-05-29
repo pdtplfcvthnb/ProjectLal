@@ -27,6 +27,21 @@ def home():
 def main():
     return render_template('Main.html')
 
+@app.route('/staff')
+def staff():
+    return render_template('Staff.html')
+
+@app.route('/feedback')
+def feedback():
+    return render_template('Feedback.html')
+
+
+
+@app.route('/photo')
+def photo():
+    return render_template('Photo.html')
+
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
