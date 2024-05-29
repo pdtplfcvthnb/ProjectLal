@@ -23,7 +23,7 @@ def home():
     return render_template('Main.html')
 
 
-@app.route('/main')
+@app.route('/Main.html')
 def main():
     return render_template('Main.html')
 
