@@ -27,17 +27,17 @@ def home():
 def main():
     return render_template('Main.html')
 
-@app.route('/staff')
+@app.route('/Staff')
 def staff():
     return render_template('Staff.html')
 
-@app.route('/feedback')
+@app.route('/Feedback')
 def feedback():
     return render_template('Feedback.html')
 
 
 
-@app.route('/photo')
+@app.route('/Photo')
 def photo():
     return render_template('Photo.html')
 
